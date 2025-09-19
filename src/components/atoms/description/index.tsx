@@ -11,11 +11,11 @@ const Description: React.FC<DescriptionProps> = ({
   size = 'medium',
   width = ''
 }) => {
-  const baseStyles = 'leading-trim: both; text-edge: cap;';
+  const baseStyles = 'leading-trim: both; text-edge: cap; ';
   
   const sizeStyles = {
-    medium: 'text-[14px] sm:text-[16px] md:text-[18px] leading-[20px] sm:leading-[24px] md:leading-[27px] tracking-[0%] font-normal',
-    small: 'text-[12px] sm:text-[14px] md:text-[16px] leading-[16px] sm:leading-[20px] md:leading-[24px] tracking-[0%] font-medium'
+    medium: 'text-[14px] sm:text-[16px] md:text-[18px] leading-[20px] sm:leading-[24px] md:leading-[27px] tracking-[0%] font-normal mb-4',
+    small: 'text-[12px] sm:text-[14px] md:text-[16px] leading-[16px] sm:leading-[20px] md:leading-[24px] tracking-[0%] font-medium mb-2'
   };
   
   return (

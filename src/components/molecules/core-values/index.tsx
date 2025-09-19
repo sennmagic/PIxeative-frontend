@@ -16,6 +16,14 @@ const CoreValues = () => {
             <div className="max-w-7xl mx-auto">
 <Heading text=" Core Values" size="large"/>
 
+<div className="w-[px] bg-black w-full h-[292px] ">
+
+
+<div className="content">
+
+</div>
+   
+</div>
             </div>
         </section>
         

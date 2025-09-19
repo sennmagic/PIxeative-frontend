@@ -10,7 +10,7 @@
 :root {
   --background: #F8F5F0;
 color: #1D1A1A ;
-      --global-spacer: 2rem; /* Base spacer value (32px) */
+      --global-spacer: 1rem; /* Base spacer value (32px) */
 
     /* Vertical rhythm spacing */
     --spacer-y: var(--global-spacer);
