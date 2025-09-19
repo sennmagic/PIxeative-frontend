@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/organisms/navbar";
+import Footer from "@/components/organisms/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const ppMori = localFont({
+  src: [
+    {
+      path: "../../public/fonts/PPMori-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PPMori-SemiBold.otf",
+      weight: "600",
+      style: "semi-bold",
+    },
+  ],
+  variable: "--font-pp-mori",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +45,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${ppMori.variable} antialiased`}
       >
+        <Navbar />
         {children}
+   
       </body>
     </html>
   );

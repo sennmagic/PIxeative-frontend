@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  border: 0 solid;
+  padding: 0;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F5F0;
+color: #1D1A1A ;
+      --global-spacer: 2rem; /* Base spacer value (32px) */
+
+    /* Vertical rhythm spacing */
+    --spacer-y: var(--global-spacer);
+
+    /* Section spacing */
+    --section-spacer: calc(var(--global-spacer) * 2);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-pp-mori);
+  --font-pp-mori: var(--font-pp-mori);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+    --foreground: ##F8F5F0;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-pp-mori), sans-serif;
 }
+
+
+
+
+  section {
+    padding-top: var(--section-spacer);
+    padding-bottom: var(--section-spacer);
+  }
